@@ -11,8 +11,8 @@ x rimuovere novalidate alla form: bowstreet.pageautomation.enable_client_form_va
 
 
 
-PMR
-x dove si configura la property bowstreet.RuntimeAgent.class? https://developer.ibm.com/answers/questions/413958/custom-implementation-of-combowstreetbuilderswebap.html
+PMR DA APRIRE
+x dove si configura la property bowstreet.RuntimeAgent.class
+x DSUI delete genera errore quando service provider non supporta il complete xml sulla lista
 - validazione integer
 - validazione float
-- DSUI delete genera errore quando service provider non supporta il complete xml sulla lista
