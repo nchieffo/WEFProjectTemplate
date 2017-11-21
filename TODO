@@ -1,0 +1,18 @@
+- come includere un JS in tutte le pagine
+- tema bootstrap (come includere i CSS non nel portale? profilo? loadCSS.jsp?)
+- disabilitare doppio submit form e doppio click bottoni
+
+
+VALIDAZIONE FORM HTML5
+!! attenzione non so se sia una bona cosa abilitarla perchè alcune validazioni (required combinati) sono valide solo server side. Dovrei puntare a far sistemare i problemi di validazione integer e float
+- aggiungere attributo "required" ai campi di input
+  per farlo devo abilitare la mia classe tramite bowstreet.RuntimeAgent.class=it.tecla.wef.runtime.Html5WebAppRuntimeAgent ma non so dove vada inserita questa property
+x rimuovere novalidate alla form: bowstreet.pageautomation.enable_client_form_validation
+
+
+
+PMR
+x dove si configura la property bowstreet.RuntimeAgent.class? https://developer.ibm.com/answers/questions/413958/custom-implementation-of-combowstreetbuilderswebap.html
+- validazione integer
+- validazione float
+- DSUI delete genera errore quando service provider non supporta il complete xml sulla lista
