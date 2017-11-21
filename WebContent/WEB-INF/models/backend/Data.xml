@@ -1,0 +1,9 @@
+<RowSet>
+   <Row>
+      <ID>ID1</ID>
+      <NAME>NAME1</NAME>
+      <SIZE>1</SIZE>
+      <PERCENT>3.14159</PERCENT>
+      <DATE>2017-01-01</DATE>
+   </Row>
+</RowSet>

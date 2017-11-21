@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://wef.ibm.com/backend/Data/data" xmlns:tns="http://wef.ibm.com/backend/Data/data"
+	xmlns:tecla="http://wef.tecla.it/tecla_base.xsd">
+
+	<xsd:import schemaLocation="tecla_base.xsd" namespace="http://wef.tecla.it/tecla_base.xsd"></xsd:import>
+	
+	<xsd:element name="RowSet">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" minOccurs="0" ref="tns:Row" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Row">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" ref="tns:ID" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:NAME" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:EMAIL" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:PASSWORD" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:SIZE" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:DECIMAL" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:FLOATING_POINT" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:DATE" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:TIME" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:DATETIME" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:ENABLED" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:ENABLED_01" />
+				<xsd:element maxOccurs="1" minOccurs="0" ref="tns:CHARTST" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ID" type="string_no_ws" />
+	<xsd:element name="NAME" type="tecla:string" />
+	<xsd:element name="EMAIL" type="tecla:email" />
+	<xsd:element name="PASSWORD" type="tecla:password" />
+	<xsd:element name="SIZE" type="xsd:integer" />
+	<xsd:element name="DECIMAL" type="xsd:decimal" />
+	<xsd:element name="FLOATING_POINT" type="xsd:float" />
+	<xsd:element name="DATE" type="xsd:date" />
+	<xsd:element name="TIME" type="xsd:time" />
+	<xsd:element name="DATETIME" type="xsd:dateTime" />
+	<xsd:element name="ENABLED" type="xsd:boolean" />
+	<xsd:element name="ENABLED_01" type="tecla:boolean_01" />
+	<xsd:element name="CHARTST" type="tecla:char" />
+
+</xsd:schema>

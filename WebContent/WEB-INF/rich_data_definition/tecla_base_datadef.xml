@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample non-Dojo mobile data definition types to use as base types with Rich Data Definition -->
+<DataDefinitions>
+
+<!-- 	<BaseDefinitions> -->
+<!-- 		<BaseDefinition>/WEB-INF/factory/data_definitions/base_datadef.xml</BaseDefinition> -->
+<!-- 	</BaseDefinitions> -->
+
+	<SchemaTypeMappings>		
+		<SchemaTypeMap type="integer">base_Integer</SchemaTypeMap>
+		<SchemaTypeMap type="int">base_Integer</SchemaTypeMap>
+		<SchemaTypeMap type="long">base_Integer</SchemaTypeMap>
+		<SchemaTypeMap type="short">base_Integer</SchemaTypeMap>
+		<SchemaTypeMap type="decimal">base_FloatingPoint</SchemaTypeMap>
+
+		<SchemaTypeMap type="time">base_Time</SchemaTypeMap>
+		<SchemaTypeMap type="dateTime">base_DateTime</SchemaTypeMap>
+
+		<SchemaTypeMap type="email">base_Email</SchemaTypeMap>
+		<SchemaTypeMap type="password">base_Password</SchemaTypeMap>
+		<SchemaTypeMap type="boolean_01">base_CheckBox_01</SchemaTypeMap>
+	</SchemaTypeMappings>
+
+	<!-- for variable-length Strings, adds case-insensitive sorting -->
+	<DataDefinition name="base_String">
+		<ReadableName resource_key="BaseString">String</ReadableName>
+		<Description>Variable-length Strings</Description>
+		<PotentialColumnSorting>Case Insensitive String</PotentialColumnSorting>
+	</DataDefinition>
+
+	<!-- for integers -->
+	<DataDefinition name="base_Integer">
+		<ReadableName resource_key="BaseInteger">Integer</ReadableName>
+		<Description>Integer</Description>
+		<PotentialColumnSorting>Numbers</PotentialColumnSorting>
+		<DataType>integer</DataType>
+		<ControlElementModifiers>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Overwrite</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>type</Name>
+								<Value>number</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Skip</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>step</Name>
+								<Value>1</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+		</ControlElementModifiers>
+	</DataDefinition>
+
+	<!-- for floats, adds numeric sorting -->
+	<DataDefinition name="base_FloatingPoint">
+		<ReadableName resource_key="BaseFloatingPoint">Floating Point</ReadableName>
+		<Description>Floating point, adds numeric sorting</Description>
+		<PotentialColumnSorting>Numbers</PotentialColumnSorting>
+		<ColumnAlignment>right</ColumnAlignment>
+		<DataType>float</DataType>
+		<PotentialColumnSorting>Numbers</PotentialColumnSorting>
+		<ControlElementModifiers>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Overwrite</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>type</Name>
+								<Value>number</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Skip</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>step</Name>
+								<Value>any</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+		</ControlElementModifiers>
+	</DataDefinition>
+
+	<!-- date - this assumes internal date format is a ISO-8601 string yyyy-mm-dd (e.g. 2007-06-01) -->
+	<DataDefinition name="base_Date">
+		<ReadableName resource_key="BaseDate">Date: yyyy-MM-dd</ReadableName>
+		<Description>Date - this assumes internal date format is a ISO-8601 string yyyy-mm-dd</Description>
+		<ValidateExpr>Date(yyyy-MM-dd)</ValidateExpr>
+		<PotentialColumnSorting>Date</PotentialColumnSorting>
+		<ControlElementModifiers>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Overwrite</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>type</Name>
+								<Value>date</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+		</ControlElementModifiers>
+	</DataDefinition>
+
+	<!-- time - this assumes internal date format is a ISO-8601 string HH:mm:ss:ss -->
+	<DataDefinition name="base_Time">
+		<ReadableName resource_key="BaseTime">Date: HH:mm:ss</ReadableName>
+		<Description>Date - this assumes internal date format is a ISO-8601 string HH:mm:ss</Description>
+		<ValidateExpr>Date(HH:mm:ss)</ValidateExpr>
+		<PotentialColumnSorting>Date</PotentialColumnSorting>
+		<ControlElementModifiers>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Overwrite</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>type</Name>
+								<Value>time</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Skip</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>step</Name>
+								<Value>1</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+		</ControlElementModifiers>
+	</DataDefinition>
+
+	<!-- dateTime - this assumes internal date format is a ISO-8601 string yyyy-MM-dd'T'HH:mm:ss -->
+	<DataDefinition name="base_DateTime">
+		<ReadableName resource_key="BaseDateTime">Date: yyyy-MM-dd'T'HH:mm:ss</ReadableName>
+		<Description>Date - this assumes internal date format is a ISO-8601 string yyyy-MM-dd'T'HH:mm:ss</Description>
+		<ValidateExpr>Date(yyyy-MM-dd'T'HH:mm:ss)</ValidateExpr>
+		<PotentialColumnSorting>Date</PotentialColumnSorting>
+		<ControlElementModifiers>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Overwrite</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>type</Name>
+								<Value>datetime-local</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Skip</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>step</Name>
+								<Value>1</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+		</ControlElementModifiers>
+	</DataDefinition>
+
+	<!-- long input for email address -->
+	<DataDefinition name="base_Email">
+		<ReadableName resource_key="BaseEmail">E-Mail Address</ReadableName>
+		<Description>Input for email address</Description>
+		<PotentialColumnSorting>Case Insensitive String</PotentialColumnSorting>
+		<DisplayControl>com.bowstreet.builders.webapp.ActiveTextBuilder</DisplayControl>
+		<DisplayInputs>
+			<Inputs>
+				<Input name="Scheme">mailto:</Input>
+			</Inputs>
+		</DisplayInputs>
+		<ControlElementModifiers>
+			<BuilderCall use_modifier_dataentry="true" use_modifier_display="false">
+				<BuilderDefID>com.bowstreet.builders.webapp.AttributeSetterBuilder</BuilderDefID>
+				<Inputs>
+					<Input name="HandleExisting">Overwrite</Input>
+					<Input name="Attributes">
+						<top>
+							<Attribute>
+								<Name>type</Name>
+								<Value>email</Value>
+							</Attribute>
+						</top>
+					</Input>
+				</Inputs>
+			</BuilderCall>
+		</ControlElementModifiers>
+	</DataDefinition>
+	
+	<!-- applies checkbox builder for data entry (assumes 0/1 values) -->
+    <DataDefinition name="base_CheckBox_01">
+		<ReadableName resource_key="BaseCheckbox01">Boolean 0/1 (Checkbox)</ReadableName>
+		<Description>Checkbox builder for data entry (assumes 0/1 values)</Description>
+		<PotentialColumnSorting>Case Insensitive String</PotentialColumnSorting>
+		<FormatterClass>it.tecla.wef.formatter.Boolean01InputFieldFormatter</FormatterClass>
+		<FormatExpr>DEFAULT</FormatExpr>
+		<TranslateExpr>DEFAULT</TranslateExpr>
+		<ValidateExpr>DEFAULT</ValidateExpr>
+		<DataEntryControl>com.bowstreet.builders.webapp.CheckBoxBuilder</DataEntryControl>
+		<DataEntryInputs>
+			<Inputs>
+				<Input name="CheckedValue">1</Input>
+				<Input name="UncheckedValue">0</Input>
+			</Inputs>
+		</DataEntryInputs>
+		
+	</DataDefinition>
+
+</DataDefinitions>

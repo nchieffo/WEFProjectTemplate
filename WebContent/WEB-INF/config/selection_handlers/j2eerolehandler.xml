@@ -1,0 +1,6 @@
+<Handler name="J2EE Role Handler">
+  <Description>Handler that maps a users J2EE roles to a matching Profile.</Description>
+  <Selection class="com.bowstreet.profiles.J2EERoleProfileSelection">
+  </Selection>
+  <SegmentList class="com.bowstreet.profiles.J2EERoleProfileSelection" />
+</Handler>

@@ -1,0 +1,5 @@
+<Handler name="WPS Execution Mode Handler">
+  <Description>Handler that returns "Portal" or "Standalone" profile (deprecated, use Portal Execution Mode Handler)</Description>
+  <Selection class="com.bowstreet.profiles.PortalModeSelectionHandler">
+  </Selection>
+</Handler>

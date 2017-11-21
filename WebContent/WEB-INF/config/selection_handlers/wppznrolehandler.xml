@@ -1,0 +1,9 @@
+<Handler name="WP Personalization Profile Rule Selection Handler">
+  <Description>Handler that maps users via WP Personalization Profile Rules.</Description>
+  <Selection class="com.bowstreet.profiles.ProxyProfileSelectionHandler">
+    <Properties>
+      <Property name="SelectionClass">com.bowstreet.ibmportal.profiles.WPPZNRoleProfileSelection</Property>
+      <Property name="wp.pzn.rule.name">ProfileByBrowserType</Property>
+    </Properties>
+  </Selection>
+</Handler>

@@ -1,0 +1,2 @@
+# PropertyConfiguratorWrapper is only allowed to read files under WEB-INF/config.
+${war.root.directory}/WEB-INF/config/*

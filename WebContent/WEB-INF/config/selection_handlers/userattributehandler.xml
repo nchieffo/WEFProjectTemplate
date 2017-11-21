@@ -1,0 +1,8 @@
+<Handler name="User Attribute Handler">
+  <Description>Profile selection handler that maps users to a segment using a specified user attribute.</Description>
+  <Selection class="com.bowstreet.profiles.UserAttributeSelectionHandler">
+    <Properties>
+      <Property name="userAttribute">uid</Property>
+    </Properties>
+  </Selection>
+</Handler>

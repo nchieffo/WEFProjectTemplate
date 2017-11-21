@@ -1,0 +1,2 @@
+# BuilderManager is only allowed to create File instances pointing to WEB-INF/builders
+${war.root.directory}/WEB-INF/builders

@@ -1,0 +1,23 @@
+# ----------------------------------------------
+#                   components
+# ----------------------------------------------
+#
+# This file is used by the Factory log manager
+#
+# This file defines the extra components that user want to keep track of
+# 
+# the following components is predefined:
+#  ALL
+#  SERVER
+#  SECURITY
+#  SERVICE
+#  MODEL
+#  DB
+#  DIR_SERVICES
+#  SERVLET
+#  ADMIN
+# You can use these predefined components, or you can add more components that you want to monitor, 
+# only the line begin with "logging.component=" will be treated as an entry, e.x.:
+#
+# logging.component=component1
+# logging.component=component2

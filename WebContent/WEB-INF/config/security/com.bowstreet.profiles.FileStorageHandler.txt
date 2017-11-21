@@ -1,0 +1,2 @@
+# Profile manager is only allowed to touch files under WEB-INF/profiles.
+${war.root.directory}/WEB-INF/profiles/*

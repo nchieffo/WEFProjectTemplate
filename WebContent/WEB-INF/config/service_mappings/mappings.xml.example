@@ -1,0 +1,48 @@
+<!--
+    This is an example of the types of constructs that can be used in the service mapping
+    registry XML files. Because this file does not have the ".xml" extension, it is ignored
+    by the mapping code.    
+  -->
+<ServiceMappings>
+
+    <!-- 
+        Make all services use their stub implementation (if any) at regen time.  
+        The "when" attribute can also take the value "run-time". There is a corresponding
+        "where" attribute that can be set to either "server" or "designer".
+    -->
+    <ForAllServices when="regen-time">
+        <UseStub />
+    </ForAllServices>
+
+    <!-- Change the implementation of a specific service. -->
+    <ForService name="services/SomeProvider">
+        <UseService name="services/SomeProvider2" />
+    </ForService>
+    
+    <!-- Use the DB2-specific version of some banking services, 
+         by replacing "interface" with "DB2" in the service name. -->
+    <ForServiceMatching pattern="banking/interface">
+        <ModifyName pattern="interface" replacement="DB2" />
+    </ForServiceMatching>
+    
+    
+    <!-- Use a mapping parameter named "role" to select implementation for a given service. -->
+    <ForService name="Service1">    
+        <IfParameterEquals name="role" value="manager">
+            <UseService name="Service1_manager" />
+        </IfParameterEquals>
+     
+        <IfParameterEquals name="role" value="executive">
+            <UseService name="Service1_executive" />
+        </IfParameterEquals>        
+
+        <!-- This is selected if the role is some value other than "manager" or "executive". -->
+        <UseService name="Service1_normal" />   
+    </ForService>
+    
+    <!-- A mapping parameter called "type" is used here by direct substitution. -->
+    <ForService name="services/Service1">
+        <UseService name="services/${type}Service1" />   
+    </ForService>    
+    
+</ServiceMappings>

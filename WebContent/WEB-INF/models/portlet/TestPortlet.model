@@ -1,0 +1,280 @@
+<Model id="portlet/TestPortlet"><BuilderCallList><BuilderCall id="bc36"><BuilderDefID>com.bowstreet.builders.webapp.LinkedJavaObjectBuilder</BuilderDefID>
+<Messages><Warning><Message>The specified class it.tecla.wef.runtime.Html5WebAppRuntimeAgent is not serializable, which may cause a loss of data during session failover.</Message>
+</Warning>
+</Messages>
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="PersistChoice">0</Input>
+<Input name="Extend">false</Input>
+<Input name="TargetPhase">Construction</Input>
+<Input name="ClassName">it.tecla.wef.runtime.Html5WebAppRuntimeAgent</Input>
+<Input name="Name">Html5WebAppRuntimeAgent</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc28"><BuilderDefID>com.bowstreet.builders.webapp.ImportedModelBuilder</BuilderDefID>
+<Messages />
+<Inputs profiled="true"><Input name="BuilderCallEnabled">true</Input>
+<Input name="UseParentProfile">true</Input>
+<Input name="ImportOnce">false</Input>
+<Input name="ProfileHandling">UseParentProfiling</Input>
+<Input name="SetProfiledInputValues">false</Input>
+<Input name="ModelName">imports/theme</Input>
+<Input name="_ProfiledInputs"><ProfiledInputs profile_contributor="imports/theme" />
+</Input>
+<Input name="Name">theme</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc4"><BuilderDefID>com.bowstreet.builders.webapp.ActionListBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="BuilderCallCategory">General</Input>
+<Input name="ReturnType">Object</Input>
+<Input name="Name">main</Input>
+<Input name="Actions"><Actions><Action><ActionName>Html5WebAppRuntimeAgent.init</ActionName>
+<ActionType></ActionType>
+</Action>
+<Action><ActionType />
+<ActionName>page1</ActionName>
+</Action>
+</Actions>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc17"><BuilderDefID>com.bowstreet.builders.webapp.ImportedPageBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="BuilderCallCategory">General</Input>
+<Input name="MethodAttribute">true</Input>
+<Input name="DesignTimeImport">false</Input>
+<Input name="AbsoluteURLs">true</Input>
+<Input name="PreserveAppContext">true</Input>
+<Input name="AddBaseTag">false</Input>
+<Input name="LocalizeUrl">false</Input>
+<Input name="LocalizationVariable">LocaleInfo</Input>
+<Input name="Name">page1</Input>
+<Input name="URL">/factory/pages/enterprise/dsui_input.html</Input>
+<Input name="FullyParse">true</Input>
+<Input name="URLModification">Absolute</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc21"><BuilderDefID>com.bowstreet.builders.webapp.ServiceConsumer2Builder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="UseAllOperations">true</Input>
+<Input name="OverrideInputs">false</Input>
+<Input name="CreateLookupTables">true</Input>
+<Input name="AssociateLookupTables">true</Input>
+<Input name="UseDiscardableInputVariables">false</Input>
+<Input name="UseDiscardableVariables">false</Input>
+<Input name="EnableCaching">true</Input>
+<Input name="InheritProfile">true</Input>
+<Input name="ProviderModel">backend/Data</Input>
+<Input name="SelectOperations"><top><OperationSelected><Operation>delete</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs</Description>
+</OperationSelected>
+<OperationSelected><Operation>details</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs
+
+	Name:			results</Description>
+</OperationSelected>
+<OperationSelected><Operation>insert</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs</Description>
+</OperationSelected>
+<OperationSelected><Operation>list</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			results</Description>
+</OperationSelected>
+<OperationSelected><Operation>search</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs
+
+	Name:			results</Description>
+</OperationSelected>
+<OperationSelected><Operation>update</Operation>
+<OperationEnabled>true</OperationEnabled>
+<Description>No description was provided.
+Parameters:
+	Name:			inputs</Description>
+</OperationSelected>
+</top>
+</Input>
+<Input name="OperationInputs"><OverridenInputs><InputsForOperation><Operation>delete</Operation>
+<Inputs><top><Input><Name>arguments</Name>
+</Input>
+<Input><Name>arguments.ID</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>details</Operation>
+<Inputs><top><Input><Name>arguments</Name>
+</Input>
+<Input><Name>arguments.ID</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>insert</Operation>
+<Inputs><top><Input><Name>Row</Name>
+</Input>
+<Input><Name>Row.ID</Name>
+</Input>
+<Input><Name>Row.NAME</Name>
+</Input>
+<Input><Name>Row.EMAIL</Name>
+</Input>
+<Input><Name>Row.PASSWORD</Name>
+</Input>
+<Input><Name>Row.SIZE</Name>
+</Input>
+<Input><Name>Row.FLOAT</Name>
+</Input>
+<Input><Name>Row.DATE</Name>
+</Input>
+<Input><Name>Row.TIME</Name>
+</Input>
+<Input><Name>Row.DATETIME</Name>
+</Input>
+<Input><Name>Row.FLOATING_POINT</Name>
+</Input>
+<Input><Name>Row.ENABLED</Name>
+</Input>
+<Input><Name>Row.DECIMAL</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>list</Operation>
+<Inputs />
+</InputsForOperation>
+<InputsForOperation><Operation>search</Operation>
+<Inputs><top><Input><Name>arguments</Name>
+</Input>
+<Input><Name>arguments.NAME</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>update</Operation>
+<Inputs><top><Input><Name>Row</Name>
+</Input>
+<Input><Name>Row.ID</Name>
+</Input>
+<Input><Name>Row.NAME</Name>
+</Input>
+<Input><Name>Row.EMAIL</Name>
+</Input>
+<Input><Name>Row.PASSWORD</Name>
+</Input>
+<Input><Name>Row.SIZE</Name>
+</Input>
+<Input><Name>Row.FLOAT</Name>
+</Input>
+<Input><Name>Row.DATE</Name>
+</Input>
+<Input><Name>Row.TIME</Name>
+</Input>
+<Input><Name>Row.DATETIME</Name>
+</Input>
+<Input><Name>Row.FLOATING_POINT</Name>
+</Input>
+<Input><Name>Row.ENABLED</Name>
+</Input>
+<Input><Name>Row.DECIMAL</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+</OverridenInputs>
+</Input>
+<Input name="ContextVariables"><ContextVariables><ValuesForOperation><Operation>details</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>search</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>update</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>insert</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>delete</Operation>
+<Mappings />
+</ValuesForOperation>
+<ValuesForOperation><Operation>list</Operation>
+<Mappings />
+</ValuesForOperation>
+</ContextVariables>
+</Input>
+<Input name="Name">Data</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc34"><BuilderDefID>com.bowstreet.builders.webapp.ActionListBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ReturnType">Object</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="Name">AL_postSave</Input>
+<Input name="Actions"><Actions><Action><ActionType>SystemOut</ActionType>
+<ActionName>${DataServices/Data/insert/inputs}</ActionName>
+</Action>
+</Actions>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc23"><BuilderDefID>com.bowstreet.builders.webapp.pageautomation.DataPage</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="PageType">DataEntry</Input>
+<Input name="inputObjectType">String</Input>
+<Input name="CreateTags">true</Input>
+<Input name="UseTheme">true</Input>
+<Input name="GenerateLabels">true</Input>
+<Input name="AddElementNames">LeaveNameless</Input>
+<Input name="ClearDataBeforeSaving">false</Input>
+<Input name="InferControl">true</Input>
+<Input name="EnumeratedControlType">Select</Input>
+<Input name="EnumeratedControlOptions">Merge</Input>
+<Input name="InitializeInputsWhen">OnModelLoad</Input>
+<Input name="ValidateFromSchema">Both</Input>
+<Input name="BeanValidation">Both</Input>
+<Input name="ValidationMethodBehavior">CallAlways</Input>
+<Input name="ValidationErrorPlacement">ColumnRight</Input>
+<Input name="RequiredPromptPlacement">ColumnLeft</Input>
+<Input name="RequiredPromptText">*</Input>
+<Input name="LocalizedResource">AddNew</Input>
+<Input name="TranslateHTMLLabels">false</Input>
+<Input name="RuntimeHTMLLabels">true</Input>
+<Input name="TemplateFile">/factory/html_templates/gridtable.html</Input>
+<Input name="TypedVariable">DataServices/Data/insert/inputs</Input>
+<Input name="PageName">page1</Input>
+<Input name="CreateTagsLocation">data_placed_here</Input>
+<Input name="DefaultName">page1</Input>
+<Input name="ValidationMethod">AL_postSave</Input>
+</Inputs>
+</BuilderCall>
+</BuilderCallList>
+<Properties><Contained>false</Contained>
+</Properties>
+<Dependencies><Dependency type="Class">it.tecla.wef.runtime.Html5WebAppRuntimeAgent</Dependency>
+<Dependency type="Model">imports/theme</Dependency>
+<Dependency type="File">/factory/pages/enterprise/dsui_input.html</Dependency>
+<Dependency type="Model">backend/Data</Dependency>
+<Dependency type="File">/factory/html_templates/color_themes.html</Dependency>
+</Dependencies>
+<ExternalProperties />
+</Model>

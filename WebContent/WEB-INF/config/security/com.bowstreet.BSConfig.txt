@@ -1,0 +1,3 @@
+# BSConfig is only allowed to touch files under WEB-INF/config and to create File instances pointing to WEB-INF.
+${war.root.directory}/WEB-INF/config/*
+${war.root.directory}/WEB-INF

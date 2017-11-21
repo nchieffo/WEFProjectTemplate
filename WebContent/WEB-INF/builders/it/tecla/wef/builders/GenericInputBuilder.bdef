@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<BuilderDef id="it.tecla.wef.builders.GenericInputBuilder" xmlns="http://www.bowstreet.com/2001/Schemas">
+    <ReadableName>Tecla Generic Input</ReadableName>
+    <GenHandlerClassName>com.bowstreet.builders.webapp.foundation.WebAppControlGenHandler</GenHandlerClassName>
+    <RequiredFactoryVersion>5.0.0</RequiredFactoryVersion>
+    <Description>Creates a generic input control at a named tag or other location on a page or pages.</Description>
+    <Domains>
+            <Domain>WebApp</Domain>
+            <Domain>Consumer</Domain>
+    </Domains>
+    <CreateModifyList>
+      <CanModify type="Page" category="Page Elements">Adds a Text Input control to the Page.</CanModify>
+      <CanModify type="[Unassigned Elements]" category="Page Elements">Adds a Text Input Control.</CanModify>
+    </CreateModifyList>
+    <Category>Page Elements</Category>
+    <Keywords>HTML, Form Submit, Input, Data Entry, Form, Page Construction, JSP</Keywords>
+    <AddFromPaletteListenerClassName>com.bowstreet.editor.uitools.designlistener.ControlAddFromPaletteListener</AddFromPaletteListenerClassName>
+    <BuilderData>
+        <BuilderDataEntry name="PickerVisibility">5</BuilderDataEntry>
+        <BuilderDataEntry name="BuilderClassName">it.tecla.wef.builders.GenericInputBuilder</BuilderDataEntry>
+        <BuilderDataEntry name="IconName">editControl</BuilderDataEntry>
+    </BuilderData>
+    <CoordinatorClassName>com.bowstreet.builders.webapp.ui.BaseHTMLCoordinator</CoordinatorClassName>
+
+    <InputDefinitions>
+        <InputDefinition name="Name"  base="com.bowstreet.core.Base.BuilderName" />
+
+        <InputDefinition name="PageLocation"  base="com.bowstreet.core.WebAppBase.PageLocation" />
+
+        <InputDefinition name="Value"  base="com.bowstreet.core.Base.IndirectValueLoopVarPreferred">
+            <Prompt>Text</Prompt>
+            <HelpText>Enter a default value for this input</HelpText>
+            <Property>true</Property>
+        </InputDefinition>
+
+        <InputDefinition name="Type"  base="com.bowstreet.core.Base.Select">
+            <Prompt>Display type</Prompt>
+            <HelpText>Display normally or as password input, using asterisks to obscure typed text</HelpText>
+            <InitialValue>Normal</InitialValue>
+            <Property>true</Property>
+            <Editor JavaClass="com.bowstreet.widget.ComboBox">
+                <Argument name="listData" inheritable="true">text,password,date,email,...</Argument>
+                <Argument name="listLabels" inheritable="true">text,password,date,email,...</Argument>
+                <Argument name="isEditable" inheritable="true">true</Argument>
+            </Editor>
+        </InputDefinition>
+
+        <InputDefinition name="HTMLAttributes" base="com.bowstreet.core.WebAppBase.HTMLAttributes" />
+    </InputDefinitions>
+
+    <GroupDefinitions>
+        <GroupDefinition name="HTMLAttributes" base="com.bowstreet.core.WebAppBase.HTMLAttributes" />
+    </GroupDefinitions>
+</BuilderDef>

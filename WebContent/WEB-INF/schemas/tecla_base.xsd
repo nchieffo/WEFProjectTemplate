@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://wef.tecla.it/tecla_base.xsd"
+	xmlns:tns="http://wef.tecla.it/tecla_base.xsd">
+
+	<xsd:simpleType name="string_no_ws">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="collapse"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="char">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"></xsd:maxLength>
+			<xsd:whiteSpace value="collapse"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="email">
+		<xsd:restriction base="xsd:string"/>
+		<xsd:whiteSpace value="collapse"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="password">
+		<xsd:restriction base="xsd:string"/>
+		<xsd:whiteSpace value="preserve"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="boolean_01">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="0"></xsd:enumeration>
+			<xsd:enumeration value="1"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

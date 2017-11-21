@@ -1,0 +1,6 @@
+<Handler name="Explicit Handler">
+  <Description>Handler that handles only explicit profile with no validation. If no explicit profile is specified then the default profile is selected.</Description>
+  <Selection class="com.bowstreet.profiles.ExplicitSelectionHandler" />
+  <SegmentList class="com.bowstreet.profiles.ExplicitSelectionHandler" />
+</Handler>
+

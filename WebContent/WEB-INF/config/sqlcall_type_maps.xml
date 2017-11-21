@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TypeMaps>
+
+  <TypeMap DatabaseProductName="Generic">
+    <Input>
+      <Entry JdbcType="ARRAY" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="BIGINT" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="BINARY" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="BIT" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="BLOB" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="CHAR" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="CLOB" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="DATE" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="DECIMAL" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="DISTINCT" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="DOUBLE" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="FLOAT" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="INTEGER" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="JAVA_OBJECT" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="LONGVARBINARY" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="LONGVARCHAR" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="NULL" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="NUMERIC" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="OTHER" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="REAL" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="REF" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="SMALLINT" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="STRUCT" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="TIME" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="TIMESTAMP" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="TINYINT" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="VARBINARY" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="VARCHAR" JdbcTypeCast="Automatic"/>
+      <!-- JDBC 4 data type support. -->
+      <Entry JdbcType="LONGNVARCHAR" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="NCHAR" JdbcTypeCast="Automatic"/>
+      <Entry JdbcType="NCLOB" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="NVARCHAR" JdbcTypeCast="Automatic"/>
+    </Input>
+  </TypeMap>
+
+  <TypeMap DatabaseProductName="Oracle">
+    <Output>
+      <Entry DbType="REF CURSOR" JdbcTypeCast="Custom"/>
+    </Output>
+  </TypeMap>
+
+  <TypeMap DatabaseProductName="AdaptiveServerEnterprise">
+    <Input>
+      <Entry JdbcType="ARRAY" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="BIGINT" JdbcTypeCast="BIGINT"/>
+      <Entry JdbcType="BINARY" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="BIT" JdbcTypeCast="BIT"/>
+      <Entry JdbcType="BLOB" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="CHAR" JdbcTypeCast="CHAR"/>
+      <Entry JdbcType="CLOB" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="DATE" JdbcTypeCast="DATE"/>
+      <Entry JdbcType="DECIMAL" JdbcTypeCast="DECIMAL"/>
+      <Entry JdbcType="DISTINCT" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="DOUBLE" JdbcTypeCast="DOUBLE"/>
+      <Entry JdbcType="FLOAT" JdbcTypeCast="FLOAT"/>
+      <Entry JdbcType="INTEGER" JdbcTypeCast="INTEGER"/>
+      <Entry JdbcType="JAVA_OBJECT" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="LONGVARBINARY" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="LONGVARCHAR" JdbcTypeCast="LONGVARCHAR"/>
+      <Entry JdbcType="NULL" JdbcTypeCast="NULL"/>
+      <Entry JdbcType="NUMERIC" JdbcTypeCast="NUMERIC"/>
+      <Entry JdbcType="OTHER" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="REAL" JdbcTypeCast="REAL"/>
+      <Entry JdbcType="REF" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="SMALLINT" JdbcTypeCast="SMALLINT"/>
+      <Entry JdbcType="STRUCT" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="TIME" JdbcTypeCast="TIME"/>
+      <Entry JdbcType="TIMESTAMP" JdbcTypeCast="TIMESTAMP"/>
+      <Entry JdbcType="TINYINT" JdbcTypeCast="TINYINT"/>
+      <Entry JdbcType="VARBINARY" JdbcTypeCast="Custom"/>
+      <Entry JdbcType="VARCHAR" JdbcTypeCast="VARCHAR"/>
+    </Input>
+  </TypeMap>
+
+</TypeMaps>

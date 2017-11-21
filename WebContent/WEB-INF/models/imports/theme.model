@@ -1,0 +1,18 @@
+<Model id="imports/theme"><BuilderCallList><BuilderCall id="bc2"><BuilderDefID>com.bowstreet.builders.webapp.Theme</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="OverrideThemeProperties">true</Input>
+<Input name="ExportThemeFile">Export Theme File</Input>
+<Input name="ThemeFile">/WEB-INF/factory/themes/wpfbase.uitheme</Input>
+<Input name="DefaultName">wpfbase</Input>
+<Input name="DefaultRDD">/WEB-INF/rich_data_definition/tecla_base_datadef.xml</Input>
+<Input name="AdditionalValues"><AdditonalValues />
+</Input>
+</Inputs>
+</BuilderCall>
+</BuilderCallList>
+<Properties><Contained>false</Contained>
+</Properties>
+<Dependencies />
+<ExternalProperties />
+</Model>

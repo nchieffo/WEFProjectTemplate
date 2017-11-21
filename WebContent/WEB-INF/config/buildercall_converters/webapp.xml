@@ -1,0 +1,149 @@
+<mappings>
+    
+    <!-- for many of these, we just use the default, but if it is listed here they will be shown in the preferred list -->
+    
+    <!--  Button to ... -->
+    
+    <!-- button to link -->
+    <mapping from="com.bowstreet.builders.webapp.ButtonBuilder" to="com.bowstreet.builders.webapp.LinkBuilder" >
+        <copy source="Label" destination="Text" />
+    </mapping>
+    
+    <!-- link to button -->
+    <mapping from="com.bowstreet.builders.webapp.LinkBuilder" to="com.bowstreet.builders.webapp.ButtonBuilder" >
+        <copy source="Text" destination="Label" />
+    </mapping>
+    
+    <!-- button to image button -->
+    <mapping from="com.bowstreet.builders.webapp.ButtonBuilder" to="com.bowstreet.builders.webapp.ImageButtonBuilder" >
+    </mapping>
+    
+    <!-- image button to button -->
+    <mapping from="com.bowstreet.builders.webapp.ImageButtonBuilder" to="com.bowstreet.builders.webapp.ButtonBuilder" >
+    </mapping>  
+     
+    <!-- button to HTML Event -->
+    <mapping from="com.bowstreet.builders.webapp.ButtonBuilder" to="com.bowstreet.builders.webapp.HTMLEventActionBuilder" >
+    </mapping>
+    
+    <!-- HTML Event to button -->
+    <mapping from="com.bowstreet.builders.webapp.HTMLEventActionBuilder" to="com.bowstreet.builders.webapp.ButtonBuilder" >
+    </mapping>  
+
+    <!-- button to Timed Action -->
+    <mapping from="com.bowstreet.builders.webapp.ButtonBuilder" to="com.bowstreet.builders.webapp.TimedActionBuilder" >
+    </mapping>
+    
+    <!-- Timed Action to button -->
+    <mapping from="com.bowstreet.builders.webapp.TimedActionBuilder" to="com.bowstreet.builders.webapp.ButtonBuilder" >
+    </mapping>  
+
+
+    <!--  Link to ... -->
+    
+    <!-- link to image button -->
+    <mapping from="com.bowstreet.builders.webapp.LinkBuilder" to="com.bowstreet.builders.webapp.ImageButtonBuilder" >
+    </mapping>
+    
+    <!-- image button to link -->
+    <mapping from="com.bowstreet.builders.webapp.ImageButtonBuilder" to="com.bowstreet.builders.webapp.LinkBuilder" >
+    </mapping>
+    
+    <!-- link to HTML Event -->
+    <mapping from="com.bowstreet.builders.webapp.LinkBuilder" to="com.bowstreet.builders.webapp.HTMLEventActionBuilder" >
+    </mapping>
+    
+    <!-- HTML Event to link -->
+    <mapping from="com.bowstreet.builders.webapp.HTMLEventActionBuilder" to="com.bowstreet.builders.webapp.LinkBuilder" >
+    </mapping>
+    
+    <!-- link to Timed Action -->
+    <mapping from="com.bowstreet.builders.webapp.LinkBuilder" to="com.bowstreet.builders.webapp.TimedActionBuilder" >
+    </mapping>
+    
+    <!-- Timed Action to link -->
+    <mapping from="com.bowstreet.builders.webapp.TimedActionBuilder" to="com.bowstreet.builders.webapp.LinkBuilder" >
+    </mapping>
+    
+    
+    <!--  Image Button to ... -->
+    
+    <!-- image button to HTML Event -->
+    <mapping from="com.bowstreet.builders.webapp.ImageButtonBuilder" to="com.bowstreet.builders.webapp.HTMLEventActionBuilder" >
+    </mapping>
+    
+    <!-- HTML Event to image button -->
+    <mapping from="com.bowstreet.builders.webapp.HTMLEventActionBuilder" to="com.bowstreet.builders.webapp.ImageButtonBuilder" >
+    </mapping>
+    
+    <!-- image button to Timed Action -->
+    <mapping from="com.bowstreet.builders.webapp.ImageButtonBuilder" to="com.bowstreet.builders.webapp.TimedActionBuilder" >
+    </mapping>
+    
+    <!-- Timed Action to image button -->
+    <mapping from="com.bowstreet.builders.webapp.TimedActionBuilder" to="com.bowstreet.builders.webapp.ImageButtonBuilder" >
+    </mapping>
+    
+    
+    <!-- HTML Event to Timed Action -->
+    <mapping from="com.bowstreet.builders.webapp.HTMLEventActionBuilder" to="com.bowstreet.builders.webapp.TimedActionBuilder" >
+    </mapping>
+    
+    <!-- Timed Action to HTML Event -->
+    <mapping from="com.bowstreet.builders.webapp.TimedActionBuilder" to="com.bowstreet.builders.webapp.HTMLEventActionBuilder" >
+    </mapping>
+    
+    
+    <!-- image button to image -->
+    <mapping from="com.bowstreet.builders.webapp.ImageButtonBuilder" to="com.bowstreet.builders.webapp.ImageBuilder" >
+        <copy source="Image" destination="ImageName" />
+    </mapping>  
+     
+    <!-- image to image button -->
+    <mapping from="com.bowstreet.builders.webapp.ImageBuilder" to="com.bowstreet.builders.webapp.ImageButtonBuilder" >
+        <copy source="ImageName" destination="Image" />
+    </mapping>
+    
+
+    <!-- old Portlet Adapter to new one -->
+    <mapping from="com.bowstreet.adapters.websphere.builders.WPSPortletAdapterBuilder" to="com.bowstreet.adapters.builders.PortletAdapterBuilder" >
+    </mapping>
+    
+
+    <!-- old breadcrumbs to new one -->
+    <mapping from="com.bowstreet.builders.webapp.Breadcrumbs" to="com.bowstreet.builders.webapp.Breadcrumbs2" >
+    </mapping>
+    
+
+   
+    
+         
+    <mapping from="com.bowstreet.builders.webapp.SelectBuilder"
+             to="com.bowstreet.builders.webapp.RadioButtonGroupBuilder" >
+        <copy source="Options" destination="SelectionOptions" />
+    </mapping>
+
+    <mapping from="com.bowstreet.builders.webapp.RadioButtonGroupBuilder"
+             to="com.bowstreet.builders.webapp.SelectBuilder" >
+        <copy source="SelectionOptions" destination="Options" />
+    </mapping>    
+    
+    <mapping from="com.bowstreet.builders.webapp.PageBuilder"
+             to="com.bowstreet.builders.webapp.ImportedPageBuilder" 
+             class="com.bowstreet.builders.webapp.converters.PageToImportedPageBuilderConverter" />
+
+    <mapping from="com.bowstreet.builders.webapp.ImportedPageBuilder"
+             to="com.bowstreet.builders.webapp.PageBuilder" 
+             class="com.bowstreet.builders.webapp.converters.ImportedPageToPageBuilderConverter" /> 
+             
+    <mapping from="com.bowstreet.builders.webapp.SchemaGeneratorBuilder"
+             to="com.bowstreet.builders.webapp.SchemaBuilder" 
+             class="com.bowstreet.builders.webapp.converters.SchemaGeneratorToSchemaBuilderConverter" />                          
+
+    <mapping from="com.bowstreet.builders.webapp.ActionListBuilder" 
+             to="com.bowstreet.builders.webapp.MethodBuilder" 
+             class="com.bowstreet.builders.webapp.converters.ActionListToMethodBuilderConverter" />
+    
+                 
+</mappings>
+

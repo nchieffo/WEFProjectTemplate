@@ -1,0 +1,6 @@
+<Handler name="Locale Selection Handler">
+  <Description>Handler that maps a users locale to a matching Profile.</Description>
+  <Selection class="com.bowstreet.profiles.LocaleSelectionHandler">
+  </Selection>
+  <SegmentList class="com.bowstreet.profiles.LocaleSelectionHandler" />
+</Handler>

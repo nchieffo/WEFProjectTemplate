@@ -1,0 +1,5 @@
+<Handler name="Portal Execution Mode Handler">
+  <Description>Handler that returns "Portal" or "Standalone" profile</Description>
+  <Selection class="com.bowstreet.profiles.PortalModeSelectionHandler">
+  </Selection>
+</Handler>

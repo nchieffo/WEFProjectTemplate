@@ -1,0 +1,2 @@
+# XSLT Transform builder can read from files under WebContent
+${war.root.directory}/*

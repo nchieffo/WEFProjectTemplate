@@ -1,0 +1,2 @@
+# BowstreetPropertyConfigurator is only allowed to create File instances pointing to WEB-INF
+${war.root.directory}/WEB-INF

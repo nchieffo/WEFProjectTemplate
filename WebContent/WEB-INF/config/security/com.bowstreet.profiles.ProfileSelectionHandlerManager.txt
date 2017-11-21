@@ -1,0 +1,2 @@
+# ProfileSelectionHandlerManager is only allowed to create File instances pointing to WEB-INF/config/selection_handlers.
+${war.root.directory}/WEB-INF/config/selection_handlers

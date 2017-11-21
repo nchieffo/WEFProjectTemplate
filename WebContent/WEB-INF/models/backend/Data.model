@@ -1,0 +1,486 @@
+<Model id="backend/Data"><BuilderCallList><BuilderCall id="bc31"><BuilderDefID>com.bowstreet.builders.webapp.ImportedModelBuilder</BuilderDefID>
+<Messages />
+<Inputs profiled="true"><Input name="BuilderCallEnabled">true</Input>
+<Input name="UseParentProfile">true</Input>
+<Input name="ImportOnce">false</Input>
+<Input name="ProfileHandling">UseParentProfiling</Input>
+<Input name="SetProfiledInputValues">false</Input>
+<Input name="ModelName">imports/theme</Input>
+<Input name="_ProfiledInputs"><ProfiledInputs profile_contributor="imports/theme" />
+</Input>
+<Input name="Name">theme</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc2"><BuilderDefID>com.bowstreet.builders.webapp.ServiceDefinitionBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="PublicService">true</Input>
+<Input name="ExportAsWSDL">false</Input>
+<Input name="WrappedDocLiteral">false</Input>
+<Input name="MaintainState">true</Input>
+<Input name="AddTestingSupport">true</Input>
+<Input name="TestCreateMain">true</Input>
+<Input name="TestIncludeDocumentation">false</Input>
+<Input name="TestOverrideInputs">false</Input>
+<Input name="LogicalOperations"><Functions><FunctionDef><LogicalName>Create</LogicalName>
+<OperationName>insert</OperationName>
+<KeyFieldRequired />
+<KeyFieldProduced />
+</FunctionDef>
+<FunctionDef><LogicalName>RetrieveList</LogicalName>
+<OperationName>list</OperationName>
+<KeyFieldRequired />
+<KeyFieldProduced>ID</KeyFieldProduced>
+</FunctionDef>
+<FunctionDef><LogicalName>Search</LogicalName>
+<OperationName>search</OperationName>
+<KeyFieldRequired />
+<KeyFieldProduced>ID</KeyFieldProduced>
+</FunctionDef>
+<FunctionDef><LogicalName>Update</LogicalName>
+<OperationName>update</OperationName>
+<KeyFieldRequired>ID</KeyFieldRequired>
+<KeyFieldProduced />
+</FunctionDef>
+<FunctionDef><LogicalName>Delete</LogicalName>
+<OperationName>delete</OperationName>
+<KeyFieldRequired>ID</KeyFieldRequired>
+<KeyFieldProduced />
+</FunctionDef>
+<FunctionDef><LogicalName>RetrieveOne</LogicalName>
+<OperationName>details</OperationName>
+<KeyFieldRequired>ID</KeyFieldRequired>
+<KeyFieldProduced />
+</FunctionDef>
+</Functions>
+</Input>
+<Input name="ServiceName">Data1</Input>
+<Input name="Name">Data1</Input>
+<Input name="TestServiceName">Data1</Input>
+<Input name="TestOperationInputs"><OverridenInputs><InputsForOperation><Operation>details</Operation>
+<Inputs><top><Input><Name>arguments</Name>
+</Input>
+<Input><Name>arguments.ID</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>delete</Operation>
+<Inputs><top><Input><Name>arguments</Name>
+</Input>
+<Input><Name>arguments.ID</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>insert</Operation>
+<Inputs><top><Input><Name>Row</Name>
+</Input>
+<Input><Name>Row.ID</Name>
+</Input>
+<Input><Name>Row.NAME</Name>
+</Input>
+<Input><Name>Row.SIZE</Name>
+</Input>
+<Input><Name>Row.PERCENT</Name>
+</Input>
+<Input><Name>Row.DATE</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>list</Operation>
+<Inputs />
+</InputsForOperation>
+<InputsForOperation><Operation>update</Operation>
+<Inputs><top><Input><Name>Row</Name>
+</Input>
+<Input><Name>Row.ID</Name>
+</Input>
+<Input><Name>Row.NAME</Name>
+</Input>
+<Input><Name>Row.SIZE</Name>
+</Input>
+<Input><Name>Row.PERCENT</Name>
+</Input>
+<Input><Name>Row.DATE</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+<InputsForOperation><Operation>search</Operation>
+<Inputs><top><Input><Name>arguments</Name>
+</Input>
+<Input><Name>arguments.NAME</Name>
+</Input>
+</top>
+</Inputs>
+</InputsForOperation>
+</OverridenInputs>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc8"><BuilderDefID>com.bowstreet.builders.webapp.SchemaBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="SchemaSourceType">Existing</Input>
+<Input name="DesignTimeImportCheckBox">true</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="Name">data</Input>
+<Input name="URIOnly">/WEB-INF/schemas/Data.xsd</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc16"><BuilderDefID>com.bowstreet.builders.webapp.ConfigBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="RelativePath">true</Input>
+<Input name="FileType">XML File</Input>
+<Input name="LoadatRunTime">true</Input>
+<Input name="FilePath">/WEB-INF/models/backend/Data.xml</Input>
+<Input name="VariableType">data/RowSet</Input>
+<Input name="Name">dataRowSet</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc27"><BuilderDefID>com.bowstreet.builders.webapp.MethodBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ReturnType">IXml</Input>
+<Input name="Body">{
+    IXml dataRowSet = webAppAccess.getVariables().getXml("dataRowSet");
+    return dataRowSet;
+}</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="TargetPhase">Construction</Input>
+<Input name="Name">list</Input>
+<Input name="XMLType">data/RowSet</Input>
+<Input name="Arguments"><top />
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc28"><BuilderDefID>com.bowstreet.builders.webapp.ServiceOperationBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="InputStructureHandling">FromOperation</Input>
+<Input name="InputAllowStructureEdit">false</Input>
+<Input name="InputAutomaticMapping">true</Input>
+<Input name="ResultStructureHandling">FromOperation</Input>
+<Input name="ResultAllowStructureEdit">false</Input>
+<Input name="ResultAutomaticMapping">true</Input>
+<Input name="EnableCaching">false</Input>
+<Input name="CachingTimeout">3600</Input>
+<Input name="PreExecuteEventEnabled">disabled</Input>
+<Input name="PostExecuteEventEnabled">disabled</Input>
+<Input name="PagedDataResource">Default</Input>
+<Input name="DataService">Data1</Input>
+<Input name="ResultMappingTable"><Fields><Field><Name>ID</Name>
+<Type>string</Type>
+</Field>
+<Field><Name>NAME</Name>
+<Type>string</Type>
+</Field>
+<Field><Name>SIZE</Name>
+<Type>int</Type>
+</Field>
+<Field><Name>PERCENT</Name>
+<Type>decimal</Type>
+</Field>
+<Field><Name>DATE</Name>
+<Type>date</Type>
+</Field>
+</Fields>
+</Input>
+<Input name="InputMappingTable"><Fields />
+</Input>
+<Input name="TargetOperation">list</Input>
+<Input name="OperationName">list</Input>
+<Input name="Name">list</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc23"><BuilderDefID>com.bowstreet.builders.webapp.MethodBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ReturnType">IXml</Input>
+<Input name="Body">{
+    IXml dataRowSet = webAppAccess.getVariables().getXml("dataRowSet");
+    List&lt;IXml&gt; children = dataRowSet.getChildren();
+    
+    IXml results = XmlUtil.create("RowSet");
+    for (IXml child : children) {
+        if (child.getText("NAME").equals(NAME)) {
+        	results.addChildElement(child.cloneElement());
+        }
+    }
+    return results;
+}</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="TargetPhase">Construction</Input>
+<Input name="Name">search</Input>
+<Input name="XMLType">data/RowSet</Input>
+<Input name="Arguments"><top><Argument><Name>NAME</Name>
+<Type>String</Type>
+</Argument>
+</top>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc24"><BuilderDefID>com.bowstreet.builders.webapp.ServiceOperationBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="InputStructureHandling">FromOperation</Input>
+<Input name="InputAllowStructureEdit">false</Input>
+<Input name="InputAutomaticMapping">true</Input>
+<Input name="ResultStructureHandling">FromOperation</Input>
+<Input name="ResultAllowStructureEdit">false</Input>
+<Input name="ResultAutomaticMapping">true</Input>
+<Input name="EnableCaching">false</Input>
+<Input name="CachingTimeout">3600</Input>
+<Input name="PreExecuteEventEnabled">disabled</Input>
+<Input name="PostExecuteEventEnabled">disabled</Input>
+<Input name="PagedDataResource">Default</Input>
+<Input name="DataService">Data1</Input>
+<Input name="ResultMappingTable"><Fields><Field><Name>ID</Name>
+<Type>string</Type>
+</Field>
+<Field><Name>NAME</Name>
+<Type>string</Type>
+</Field>
+<Field><Name>SIZE</Name>
+<Type>int</Type>
+</Field>
+<Field><Name>PERCENT</Name>
+<Type>decimal</Type>
+</Field>
+<Field><Name>DATE</Name>
+<Type>date</Type>
+</Field>
+</Fields>
+</Input>
+<Input name="InputMappingTable"><Fields><Field><Name>NAME</Name>
+<Type>string</Type>
+</Field>
+</Fields>
+</Input>
+<Input name="TargetOperation">search</Input>
+<Input name="OperationName">search</Input>
+<Input name="Name">search</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc18"><BuilderDefID>com.bowstreet.builders.webapp.MethodBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ReturnType">IXml</Input>
+<Input name="Body">{
+    IXml dataRowSet = webAppAccess.getVariables().getXml("dataRowSet");
+    IXml data = dataRowSet.findElement("Row[ID='" + ID + "']");
+    if (data == null) {
+        data = XmlUtil.create("RowSet");
+    }
+    return data;
+}</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="TargetPhase">Construction</Input>
+<Input name="Name">details</Input>
+<Input name="XMLType">data/Row</Input>
+<Input name="Arguments"><top><Argument><Name>ID</Name>
+<Type>String</Type>
+</Argument>
+</top>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc14"><BuilderDefID>com.bowstreet.builders.webapp.ServiceOperationBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="InputStructureHandling">FromOperation</Input>
+<Input name="InputAllowStructureEdit">false</Input>
+<Input name="InputAutomaticMapping">true</Input>
+<Input name="ResultStructureHandling">FromOperation</Input>
+<Input name="ResultAllowStructureEdit">false</Input>
+<Input name="ResultAutomaticMapping">true</Input>
+<Input name="EnableCaching">false</Input>
+<Input name="CachingTimeout">3600</Input>
+<Input name="PreExecuteEventEnabled">disabled</Input>
+<Input name="PostExecuteEventEnabled">disabled</Input>
+<Input name="PagedDataResource">Default</Input>
+<Input name="DataService">Data1</Input>
+<Input name="ResultMappingTable"><Fields><Field><Name>ID</Name>
+<Type>string</Type>
+</Field>
+<Field><Name>NAME</Name>
+<Type>string</Type>
+</Field>
+<Field><Name>SIZE</Name>
+<Type>int</Type>
+</Field>
+<Field><Name>PERCENT</Name>
+<Type>decimal</Type>
+</Field>
+<Field><Name>DATE</Name>
+<Type>date</Type>
+</Field>
+</Fields>
+</Input>
+<Input name="InputMappingTable"><Fields><Field><Name>ID</Name>
+<Type>string</Type>
+</Field>
+</Fields>
+</Input>
+<Input name="TargetOperation">details</Input>
+<Input name="OperationName">details</Input>
+<Input name="Name">details</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc25"><BuilderDefID>com.bowstreet.builders.webapp.MethodBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ReturnType">void</Input>
+<Input name="Body">{
+    IXml data = details(webAppAccess, ID);
+    if (data != null) {
+        IXml updateInputs = webAppAccess.getVariables().getXml("updateInputs");
+        data.removeChildren();
+        data.copyContent(updateInputs);
+    }
+}</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="TargetPhase">Construction</Input>
+<Input name="Name">update</Input>
+<Input name="Arguments"><top><Argument><Name>ID</Name>
+<Type>String</Type>
+</Argument>
+</top>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc26"><BuilderDefID>com.bowstreet.builders.webapp.ServiceOperationBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="InputStructureHandling">Specify</Input>
+<Input name="InputAllowStructureEdit">false</Input>
+<Input name="InputAutomaticMapping">true</Input>
+<Input name="ResultStructureHandling">FromOperation</Input>
+<Input name="ResultAllowStructureEdit">false</Input>
+<Input name="ResultAutomaticMapping">true</Input>
+<Input name="EnableCaching">false</Input>
+<Input name="CachingTimeout">3600</Input>
+<Input name="PreExecuteEventEnabled">disabled</Input>
+<Input name="PostExecuteEventEnabled">disabled</Input>
+<Input name="PagedDataResource">Default</Input>
+<Input name="DataService">Data1</Input>
+<Input name="ResultMappingTable"><Fields />
+</Input>
+<Input name="InputMappingTable"><Fields><Field><Name>ID</Name>
+<Type>string</Type>
+</Field>
+</Fields>
+</Input>
+<Input name="TargetOperation">update</Input>
+<Input name="OperationName">update</Input>
+<Input name="Name">update</Input>
+<Input name="InputSchema">data/Row</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc20"><BuilderDefID>com.bowstreet.builders.webapp.MethodBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ReturnType">void</Input>
+<Input name="Body">{
+    IXml dataRowSet = webAppAccess.getVariables().getXml("dataRowSet");
+    IXml insertInputs = webAppAccess.getVariables().getXml("insertInputs");
+    dataRowSet.addChildElement(insertInputs.cloneElement());
+}</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="TargetPhase">Construction</Input>
+<Input name="Name">insert</Input>
+<Input name="Arguments"><top />
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc12"><BuilderDefID>com.bowstreet.builders.webapp.ServiceOperationBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="InputStructureHandling">Specify</Input>
+<Input name="InputAllowStructureEdit">false</Input>
+<Input name="InputAutomaticMapping">true</Input>
+<Input name="ResultStructureHandling">FromOperation</Input>
+<Input name="ResultAllowStructureEdit">false</Input>
+<Input name="ResultAutomaticMapping">true</Input>
+<Input name="EnableCaching">false</Input>
+<Input name="CachingTimeout">3600</Input>
+<Input name="PreExecuteEventEnabled">disabled</Input>
+<Input name="PostExecuteEventEnabled">disabled</Input>
+<Input name="PagedDataResource">Default</Input>
+<Input name="DataService">Data1</Input>
+<Input name="ResultMappingTable"><Fields />
+</Input>
+<Input name="InputMappingTable"><Fields />
+</Input>
+<Input name="TargetOperation">insert</Input>
+<Input name="OperationName">insert</Input>
+<Input name="Name">insert</Input>
+<Input name="InputSchema">data/Row</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc21"><BuilderDefID>com.bowstreet.builders.webapp.MethodBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="ReturnType">void</Input>
+<Input name="Body">{
+    IXml data = details(webAppAccess, ID);
+    if (data != null) {
+        data.getParentElement().removeChildElement(data);
+    }
+}</Input>
+<Input name="RenameExisting">false</Input>
+<Input name="TargetPhase">Construction</Input>
+<Input name="Name">delete</Input>
+<Input name="Arguments"><top><Argument><Name>ID</Name>
+<Type>String</Type>
+</Argument>
+</top>
+</Input>
+</Inputs>
+</BuilderCall>
+<BuilderCall id="bc22"><BuilderDefID>com.bowstreet.builders.webapp.ServiceOperationBuilder</BuilderDefID>
+<Messages />
+<Inputs><Input name="BuilderCallEnabled">true</Input>
+<Input name="InputStructureHandling">FromOperation</Input>
+<Input name="InputAllowStructureEdit">false</Input>
+<Input name="InputAutomaticMapping">true</Input>
+<Input name="ResultStructureHandling">FromOperation</Input>
+<Input name="ResultAllowStructureEdit">false</Input>
+<Input name="ResultAutomaticMapping">true</Input>
+<Input name="EnableCaching">false</Input>
+<Input name="CachingTimeout">3600</Input>
+<Input name="PreExecuteEventEnabled">disabled</Input>
+<Input name="PostExecuteEventEnabled">disabled</Input>
+<Input name="PagedDataResource">Default</Input>
+<Input name="DataService">Data1</Input>
+<Input name="ResultMappingTable"><Fields />
+</Input>
+<Input name="InputMappingTable"><Fields><Field><Name>ID</Name>
+<Type>string</Type>
+</Field>
+</Fields>
+</Input>
+<Input name="TargetOperation">delete</Input>
+<Input name="OperationName">delete</Input>
+<Input name="Name">delete</Input>
+</Inputs>
+</BuilderCall>
+</BuilderCallList>
+<Properties><Contained>false</Contained>
+</Properties>
+<Dependencies><Dependency type="Model">imports/theme</Dependency>
+<Dependency type="File">WEB-INF/schemas/Data.xsd</Dependency>
+<Dependency type="File">/WEB-INF/models/backend/Data.xml</Dependency>
+<Dependency type="File">/factory/pages/service_test_index_page.html</Dependency>
+<Dependency type="Model">factory/portletbase/view_and_form_base</Dependency>
+<Dependency type="File">/factory/pages/view_and_form/enterprise_view.html</Dependency>
+<Dependency type="File">/factory/html_templates/enterprise.html</Dependency>
+<Dependency type="File">/factory/pages/view_and_form/enterprise_input.html</Dependency>
+<Dependency type="Class">com.bowstreet.builderutilities.NameSequencer</Dependency>
+</Dependencies>
+<ExternalProperties><ExternalProperty id="Service2Enabled">true</ExternalProperty>
+</ExternalProperties>
+</Model>

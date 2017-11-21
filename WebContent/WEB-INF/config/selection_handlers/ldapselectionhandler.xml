@@ -1,0 +1,51 @@
+<Handler name="LDAP Group Based Selection Handler">
+  <Description>Handler that maps a user authenticated via LDAP to a profile by using the user's LDAP Group membership as the segments associated with profiles.</Description>
+  <Selection class="com.bowstreet.profiles.LDAPSelectionHandler">
+    <Properties>
+	<!-- Properties for connecting to the LDAP server -->
+      <Property name="java.naming.provider.url">ldap://myldapserver:389</Property>
+      <Property name="java.naming.factory.initial">com.sun.jndi.ldap.LdapCtxFactory</Property>
+      <Property name="bowstreet.ldap.root">o=mycompany,c=us</Property>
+
+	<!-- Properties for finding a user dn based on username -->
+      <Property name="bowstreet.ldap.user.root">o=mycompany,c=us</Property>
+      <Property name="bowstreet.ldap.user.objectClass">inetorgperson</Property>
+      <Property name="bowstreet.ldap.user.namingAttribute">uid</Property>
+
+	<!-- Properties for doing group membership searches -->
+      <Property name="bowstreet.ldap.group.root">o=mycompany,c=us</Property>
+      <Property name="bowstreet.ldap.group.objectClass">groupofuniquenames</Property>
+      <Property name="bowstreet.ldap.group.memberAttribute">uniquemember</Property>
+
+      <!-- Account used by the handler to authenticate to the server, to do the above lookups with -->
+      <Property name="bowstreet.ldap.account.userdn">uid=myldapserveraccount,o=mycompany,c=us</Property>
+      <!-- Obscured password for the above account -->
+      <!-- Use "obscure mypassword" in WEB-INF/bin/ to obscure a cleartext password -->
+      <Property name="bowstreet.ldap.account.userpassword">2Gj+pV4mC98BUWTUYfpiOm/KaFRpf3M=</Property>
+
+	<!-- How long (in seconds) do we trust the list of groups we store in the user's session after lookup -->
+      <Property name="bowstreet.ldap.cache.timeout">3600</Property>
+
+    </Properties>
+  </Selection>
+
+  <SegmentList class="com.bowstreet.profiles.LDAPSelectionHandler">
+    <Properties>
+	<!-- Properties for connecting to the LDAP server -->
+      <Property name="java.naming.provider.url">ldap://myldapserver:389</Property>
+      <Property name="java.naming.factory.initial">com.sun.jndi.ldap.LdapCtxFactory</Property>
+      <Property name="bowstreet.ldap.root">o=mycompany,c=us</Property>
+
+	<!-- LDAP objectclass for groups, for retrieving a list of known groups in given container-->
+      <Property name="bowstreet.ldap.group.root">o=mycompany,c=us</Property>
+      <Property name="bowstreet.ldap.group.objectClass">groupofuniquenames</Property>
+
+      <!-- Account used by the handler to authenticate to the server, to do the above lookups with -->
+      <Property name="bowstreet.ldap.account.userdn">uid=myldapserveraccount,o=mycompany,c=us</Property>
+      <!-- Obscured password for the above account -->
+      <!-- Use "obscure mypassword" in WEB-INF/bin/ to obscure a cleartext password -->
+      <Property name="bowstreet.ldap.account.userpassword">2Gj+pV4mC98BUWTUYfpiOm/KaFRpf3M=</Property>
+    </Properties>
+  </SegmentList>
+
+</Handler>

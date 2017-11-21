@@ -1,0 +1,2 @@
+# ObservableProperties is only allowed to touch files under WEB-INF/config.
+${war.root.directory}/WEB-INF/config/*

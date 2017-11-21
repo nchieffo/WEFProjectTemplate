@@ -1,0 +1,5 @@
+# WebAppRunner is only allowed to touch files under WEB-INF/upload and to create File instances pointing to WEB-INF.
+# The upload folder is used to store files uploaded to the server by the File Upload builder.  You should make sure
+# that the paths used by the File Upload builders in the project are recorded here or the uploads will not be allowed.
+${war.root.directory}/WEB-INF/upload/*
+${war.root.directory}/WEB-INF

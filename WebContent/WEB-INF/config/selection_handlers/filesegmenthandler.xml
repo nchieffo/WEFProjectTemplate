@@ -1,0 +1,13 @@
+<Handler name="File Segment Handler">
+  <Description>Handler that maps users to a segment using mapping data from a simple xml file.</Description>
+  <Selection class="com.bowstreet.profiles.FileSegmentSelectionHandler">
+    <Properties>
+      <Property name="FileName">factory/profile_segment_data/segments.xml</Property>
+    </Properties>
+  </Selection>
+  <SegmentList class="com.bowstreet.profiles.FileSegmentSelectionHandler" >
+    <Properties>
+      <Property name="FileName">factory/profile_segment_data/segments.xml</Property>
+    </Properties>
+  </SegmentList>
+</Handler>

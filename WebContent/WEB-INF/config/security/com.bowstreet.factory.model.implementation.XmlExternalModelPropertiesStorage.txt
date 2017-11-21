@@ -1,0 +1,2 @@
+# XmlExternalModelPropertiesStorage is only allowed to touch files under WEB-INF/models.
+${war.root.directory}/WEB-INF/models/*

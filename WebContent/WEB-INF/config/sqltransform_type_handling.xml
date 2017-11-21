@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TransformPreferences>
+
+  <TransformPreference Builder="*">
+    <Entry JdbcType="ARRAY" PreferredHandling="Exclude"/>
+    <Entry JdbcType="BINARY" PreferredHandling="Exclude"/>
+    <Entry JdbcType="BLOB" PreferredHandling="Exclude"/>
+    <Entry JdbcType="CLOB" PreferredHandling="Exclude"/>
+    <Entry JdbcType="DISTINCT" PreferredHandling="Exclude"/>
+    <Entry JdbcType="JAVA_OBJECT" PreferredHandling="Exclude"/>
+    <Entry JdbcType="LONGVARBINARY" PreferredHandling="Exclude"/>
+    <Entry JdbcType="OTHER" PreferredHandling="Exclude"/>
+    <Entry JdbcType="REF" PreferredHandling="Exclude"/>
+    <Entry JdbcType="STRUCT" PreferredHandling="Exclude"/>
+    <Entry JdbcType="VARBINARY" PreferredHandling="Exclude"/>
+  </TransformPreference>
+
+</TransformPreferences>

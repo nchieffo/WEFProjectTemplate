@@ -1,0 +1,17 @@
+/com.bowstreet.profileset.SimpleLocaleValues.pset
+/CompanyPortlet.pset
+/databaseserviceproviderps.pset
+/datacolumncustomizerbaseps.pset
+/dbxmlschema.pset
+/mainandpagebaseps.pset
+/portletbase_sql_crud.pset
+/portletbase_view_and_form.pset
+/portletbase.beancrud.pset
+/portletbase.dataview.pset
+/PortletEditPageProperties.pset
+/runtime.profile.selection.pset
+/SamplePortletAttributes.pset
+/servicedocumentationbaseps.pset
+/wizardbase.DB_view_and_form.pset
+/wizardbase.REST_view_and_form.pset
+/wizardbase.simple_model.pset

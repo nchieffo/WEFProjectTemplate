@@ -1,0 +1,43 @@
+<ObjectRepresentationRegistry>
+    <!-- IXml -->
+    <ObjectRepresentation>
+        <NamespaceURI>http://www.w3.org/2001/XMLSchema</NamespaceURI>
+        <TypeName>anyType</TypeName>
+        <ObjectClassName>com.bowstreet.util.IXml</ObjectClassName>
+        <ObjectBuilderName>com.bowstreet.xml.core.IXmlBuilder</ObjectBuilderName>
+        <ObjectWalkerName>com.bowstreet.xml.core.IXmlWalker</ObjectWalkerName>
+    </ObjectRepresentation>
+    <!-- DOM -->
+    <ObjectRepresentation>
+        <NamespaceURI>http://www.w3.org/2001/XMLSchema</NamespaceURI>
+        <TypeName>anyType</TypeName>
+        <ObjectClassName>org.w3c.dom.Document</ObjectClassName>
+        <ObjectBuilderName></ObjectBuilderName>
+        <ObjectWalkerName>com.bowstreet.xml.core.DOMWalker</ObjectWalkerName>
+    </ObjectRepresentation>
+    <!-- JDOM Document -->
+    <ObjectRepresentation>
+        <NamespaceURI>http://www.w3.org/2001/XMLSchema</NamespaceURI>
+        <TypeName>anyType</TypeName>
+        <ObjectClassName>org.jdom.Document</ObjectClassName>
+        <ObjectBuilderName>com.bowstreet.xml.core.JDOMBuilder</ObjectBuilderName>
+        <ObjectWalkerName>com.bowstreet.xml.core.JDOMWalker</ObjectWalkerName>
+    </ObjectRepresentation>
+    <!-- JDOM Element -->
+    <ObjectRepresentation>
+        <NamespaceURI>http://www.w3.org/2001/XMLSchema</NamespaceURI>
+        <TypeName>anyType</TypeName>
+        <ObjectClassName>org.jdom.Element</ObjectClassName>
+        <ObjectBuilderName>com.bowstreet.xml.core.JDOMElementBuilder</ObjectBuilderName>
+        <ObjectWalkerName>com.bowstreet.xml.core.JDOMElementWalker</ObjectWalkerName>
+    </ObjectRepresentation>
+    <!-- WebServiceXmlElement -->
+    <ObjectRepresentation>
+        <NamespaceURI>http://www.w3.org/2001/XMLSchema</NamespaceURI>
+        <TypeName>anyType</TypeName>
+        <ObjectClassName>com.bowstreet.services.base.WebServiceXmlElement</ObjectClassName>
+        <ObjectBuilderName>com.bowstreet.xml.core.WebServiceXmlBuilder</ObjectBuilderName>
+        <ObjectWalkerName>com.bowstreet.xml.core.IXmlWalker</ObjectWalkerName>
+    </ObjectRepresentation>
+    
+</ObjectRepresentationRegistry>                                                                                                                                                                                                                                                                                                                                                                                          

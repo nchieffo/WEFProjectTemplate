@@ -1,0 +1,52 @@
+<licenses license-version="1.0">
+   <license license-version="1.0" type="deployable" component="Factory">
+      <product-name>IBM WebSphere Portlet Factory</product-name>
+      <product-id>002</product-id>
+      <component-version>5</component-version>
+      <licensee>
+         IBM WebSphere Portlet Factory License Designer Seat 1000-4801-2606-DSNR-L001
+      </licensee>
+      <expiration type="never" value="0">Never expires</expiration>
+      <subcomponents>
+         <component>
+            <component-id>0010</component-id>
+            <component-name>Siebel Extension</component-name>
+         </component>
+         <component>
+            <component-id>0009</component-id>
+            <component-name>PeopleSoft Extension</component-name>
+         </component>
+         <component>
+            <component-id>0007</component-id>
+            <component-name>SAP Extension</component-name>
+         </component>
+         <component>
+            <component-id>0006</component-id>
+            <component-name>LCX</component-name>
+         </component>
+         <component>
+            <component-id>0005</component-id>
+            <component-name>JSR168 Adapter</component-name>
+         </component>
+         <component>
+            <component-id>0004</component-id>
+            <component-name>WPS Adapter</component-name>
+         </component>
+         <component>
+            <component-id>0003</component-id>
+            <component-name>Factory WebApp Runtime</component-name>
+         </component>
+         <component>
+            <component-id>0002</component-id>
+            <component-name>Core</component-name>
+         </component>
+         <component>
+            <component-id>0001</component-id>
+            <component-name>Designer</component-name>
+         </component>
+      </subcomponents>
+      <license-verifier>
+         MC0CFHaZk9CFwDUB3OnHHeT2nsBPQ1ESAhUAh1XpRH85k5R0UWG67J3uchgKAhg=
+      </license-verifier>
+   </license>
+</licenses>

@@ -1,0 +1,8 @@
+<Handler name="WPS Group Segment Handler">
+  <Description>Handler that maps users to a segment using WPS group membership.</Description>
+  <Selection class="com.bowstreet.profiles.ProxyProfileSelectionHandler">
+    <Properties>
+      <Property name="SelectionClass">com.bowstreet.ibmportal.profiles.WPSGroupProfileSelection</Property>
+    </Properties>
+  </Selection>
+</Handler>
